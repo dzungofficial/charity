@@ -1,0 +1,150 @@
+:root {
+    --primary: #2B7A78;
+    --secondary: #3AAFA9;
+    --accent: #FE9920;
+    --light: #DEF2F1;
+    --dark: #17252A;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: var(--light);
+    color: var(--dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.auth-container {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.auth-form h2 {
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.auth-form p {
+    margin-bottom: 1.5rem;
+    color: #666;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.auth-btn {
+    background: var(--accent);
+    color: var(--white);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.auth-btn:hover {
+    background: var(--primary);
+}
+
+.social-login {
+    margin-top: 1.5rem;
+}
+
+.social-login p {
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+.social-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.social-btn {
+    background: var(--white);
+    border: 1px solid #ddd;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: 0.3s;
+}
+
+.social-btn:hover {
+    background: var(--light);
+}
+
+.social-btn i {
+    font-size: 1.2rem;
+}
+
+.google-btn {
+    color: #DB4437;
+}
+
+.facebook-btn {
+    color: #1877F2;
+}
+
+/* Logout Page Specific Styles */
+.cancel-link {
+    display: block;
+    margin-top: 1rem;
+    color: var(--accent);
+    text-decoration: none;
+    text-align: center;
+}
+
+.cancel-link:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .auth-container {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .auth-container {
+        width: 100%;
+    }
+}

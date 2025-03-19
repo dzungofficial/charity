@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - GlobalCare Foundation</title>
+    <link rel="stylesheet" href="events.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Dashboard Navigation -->
+    <nav class="dashboard-nav">
+        <div class="logo">GlobalCare</div>
+        <ul class="nav-links">
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="donation.html"><i class="fas fa-donate"></i> Donate</a></li>
+            <li><a href="transparency.html"><i class="fas fa-chart-line"></i> Transparency</a></li>
+            <li><a href="stories.html"><i class="fas fa-book"></i> Stories</a></li>
+            <li><a href="events.html"><i class="fas fa-calendar-alt"></i> Events</a></li>
+            <li><a href="volunteer.html"><i class="fas fa-hands-helping"></i> Volunteer</a></li>
+        </ul>
+        <div class="profile-dropdown">
+            <button class="profile-btn" title="profile">
+              <i class="fas fa-user-circle"></i>
+            </button>
+            <div class="dropdown-content">
+                  <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                  <a href="events.html"><i class="fas fa-plus"></i> New Event</a>
+                  <a href="donation.html"><i class="fas fa-donate"></i> Donate</a>
+                  <a href="transparency.html"><i class="fas fa-chart-line"></i> Transparency</a>
+                  <a href="stories.html"><i class="fas fa-book"></i> Stories</a>
+                  <a href="volunteer.html"><i class="fas fa-hands-helping"></i> Volunteer</a>
+                  <a href="logout.html"><i class="fas fa-sign-out-alt"></i> Log out</a>
+            </div>
+          </div>
+    </nav>
+
+    <!-- Events Section -->
+    <section class="events-section">
+        <div class="container">
+            <h2>Upcoming Events</h2>
+            <p>Join us in our upcoming events to make a difference.</p>
+            <div class="event-grid">
+                <!-- Event Card 1 -->
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="images/event1.jpg" alt="Charity Run">
+                    </div>
+                    <div class="event-details">
+                        <h3><i class="fas fa-running"></i> Charity Run</h3>
+                        <p class="date"><i class="fas fa-calendar-day"></i> ----------</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> ----------</p>
+                        <p class="description">Join us for a 5K charity run to raise funds for education programs.</p>
+                        <a href="volunteer.html" class="register-btn">Register Now</a>
+                    </div>
+                </div>
+                <!-- Event Card 2 -->
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="images/event2.jpg" alt="Food Drive">
+                    </div>
+                    <div class="event-details">
+                        <h3><i class="fas fa-utensils"></i> Food Drive</h3>
+                        <p class="date"><i class="fas fa-calendar-day"></i> ----------</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> ----------</p>
+                        <p class="description">Help us collect and distribute food to families in need.</p>
+                        <a href="volunteer.html" class="register-btn">Register Now</a>
+                    </div>
+                </div>
+                <!-- Event Card 3 -->
+                <div class="event-card">
+                    <div class="event-image">
+                        <img src="images/event3.jpg" alt="Education Fair">
+                    </div>
+                    <div class="event-details">
+                        <h3><i class="fas fa-medkit"></i> Education Fair</h3>
+                        <p class="date"><i class="fas fa-calendar-day"></i> --------------</p>
+                        <p class="location"><i class="fas fa-map-marker-alt"></i> --------------</p>
+                        <p class="description">Free health check-ups and medical aid for underserved communities.</p>
+                        <a href="volunteer.html" class="register-btn">Register Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

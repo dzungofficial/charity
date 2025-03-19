@@ -1,0 +1,291 @@
+/* Dashboard Styles */
+:root {
+    --primary: #2B7A78;
+    --secondary: #3AAFA9;
+    --accent: #FE9920;
+    --light: #DEF2F1;
+    --dark: #17252A;
+    --white: #FFFFFF;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background: var(--light);
+    color: var(--dark);
+  }
+  .profile-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.profile-dropdown:hover .dropdown-content {
+  display: block;
+}
+  /* Default styles */
+  .dashboard-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff1f1;
+    padding: 15px 20px;
+    color: white;
+  }
+  
+  .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li {
+    display: inline;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 8px 12px;
+    border-radius: 5px;
+  }
+  
+  .hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  /* Media Query for Small Screens */
+  @media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #5e5959;
+        width: 200px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+  
+    .nav-links.active {
+        display: flex;
+    }
+  
+    .hamburger {
+        display: block;
+    }
+  }
+  
+  
+  /* Main Content */
+  .dashboard-content {
+    padding: 2rem;
+  }
+/* Navigation Bar */
+.dashboard-nav {
+    width: 100%;
+    background: var(--dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--light);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff7f7;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 200px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+/* Job Application Container */
+.application-container {
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.3s;
+    text-align: center;
+    margin-top: 80px; /* Space below navbar */
+    margin: 80px auto 0 auto;
+}
+
+/* Hover effect */
+.application-container:hover {
+    transform: translateY(-3px);
+}
+
+/* Header Styles */
+h2 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Input Group */
+.input-group {
+    position: relative;
+    margin-bottom: 12px;
+    text-align: left;
+}
+
+/* Labels with Icons */
+.input-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 5px;
+}
+
+/* Input Fields */
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 14px;
+    background: white;
+    transition: 0.3s;
+}
+
+/* Focus Effect */
+input:focus, select:focus, textarea:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Upload Button Style */
+input[type="file"] {
+    padding: 8px;
+}
+
+/* Submit Button */
+button {
+    width: 100%;
+    background: #007bff;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Button Hover */
+button:hover {
+    background: #0056b3;
+}
+
+/* Responsive */
+@media screen and (max-width: 480px) {
+    .application-container {
+        width: 90%;
+    }
+}
