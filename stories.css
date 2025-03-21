@@ -343,3 +343,21 @@ body {
   .footer-bottom p {
     margin: 5px 0;
   }
+
+/* Logo Container */
+.logo {
+  display: inline-block;
+  height: 60px; /* Adjust based on your logo's aspect ratio */
+  transition: transform 0.3s ease;
+}
+
+/* Logo Image */
+.logo img {
+  height: 100%; /* Make the image fill the container */
+  width: auto; /* Maintain aspect ratio */
+}
+
+/* Hover Effect */
+.logo:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
