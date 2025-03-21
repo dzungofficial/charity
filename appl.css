@@ -289,3 +289,21 @@ button:hover {
         width: 90%;
     }
 }
+
+/* Logo Container */
+.logo {
+  display: inline-block;
+  height: 60px; /* Adjust based on your logo's aspect ratio */
+  transition: transform 0.3s ease;
+}
+
+/* Logo Image */
+.logo img {
+  height: 80%; /* Make the image fill the container */
+  width: auto; /* Maintain aspect ratio */
+}
+
+/* Hover Effect */
+.logo:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
