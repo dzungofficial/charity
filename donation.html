@@ -6,6 +6,217 @@
     <title>GlobalCare Foundation</title>
     <link rel="stylesheet" href="donation.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+       <style>
+        /* Global Styles */
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .donation-container {
+            background: #fff;
+            padding: 70px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
+            width: 90%;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 2.2rem;
+            margin-bottom: 2rem;
+            font-weight: 600;
+            border-bottom: 2px solid #4CAF50;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+
+        .payment-methods {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .payment-card {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            width: 280px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #e0e0e0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .payment-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+            border-color: #4CAF50;
+        }
+
+        .payment-card i {
+            font-size: 3rem;
+            color: #4CAF50;
+            margin-bottom: 1.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .payment-card:hover i {
+            color: #2c3e50;
+        }
+
+        .payment-card h3 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #2c3e50;
+            font-weight: 500;
+        }
+
+        .payment-card .instructions {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transition: top 0.4s ease, opacity 0.4s ease;
+        }
+
+        .payment-card.active .instructions {
+            top: 0;
+            opacity: 1;
+        }
+
+        .instructions p {
+            margin: 0;
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 1024px) {
+            .payment-card {
+                width: 240px;
+                padding: 1.5rem;
+            }
+
+            .payment-card i {
+                font-size: 2.5rem;
+            }
+
+            .payment-card h3 {
+                font-size: 1.3rem;
+            }
+
+            .instructions p {
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .payment-card {
+                width: 220px;
+                padding: 1.2rem;
+            }
+
+            .payment-card i {
+                font-size: 2.2rem;
+            }
+
+            .payment-card h3 {
+                font-size: 1.2rem;
+            }
+
+            .instructions p {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .payment-card {
+                width: 100%;
+                max-width: 280px;
+                padding: 1.5rem;
+            }
+
+            .payment-card i {
+                font-size: 2.5rem;
+            }
+
+            .payment-card h3 {
+                font-size: 1.4rem;
+            }
+
+            .instructions p {
+                font-size: 1rem;
+            }
+
+            .instructions {
+                padding: 1.5rem;
+            }
+
+            /* Hide hover effect on mobile */
+            .payment-card:hover {
+                transform: none;
+                box-shadow: none;
+                border-color: #e0e0e0;
+            }
+
+            .payment-card:hover i {
+                color: #4CAF50;
+            }
+
+            /* Pop-up effect for mobile */
+            .payment-card.active {
+                transform: translateY(-5px);
+                box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+                border-color: #4CAF50;
+            }
+
+            .payment-card.active i {
+                color: #2c3e50;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .instructions p {
+                font-size: 0.9rem;
+            }
+
+            .instructions {
+                padding: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Dashboard Navigation -->
@@ -65,7 +276,88 @@
         </div>
     </div>
 </section>
+<div class="donation-container">
+        <h1>Support Our Cause</h1>
 
+        <div class="payment-methods">
+            <!-- Tigo Pesa -->
+            <div class="payment-card" onclick="toggleInstructions(this)">
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Tigo Pesa</h3>
+                <div class="instructions">
+                    <p>
+                        <strong>Tigo Pesa Instructions:</strong><br>
+                        1. Go to Tigo Pesa.<br>
+                        2. Select "Send Money."<br>
+                        3. Enter our number: <strong>0651 234 567</strong>.<br>
+                        4. Enter the amount.<br>
+                        5. Complete the transaction.
+                    </p>
+                </div>
+            </div>
+
+            <!-- M-Pesa -->
+            <div class="payment-card" onclick="toggleInstructions(this)">
+                <i class="fas fa-wallet"></i>
+                <h3>M-Pesa</h3>
+                <div class="instructions">
+                    <p>
+                        <strong>M-Pesa Instructions:</strong><br>
+                        1. Go to M-Pesa.<br>
+                        2. Select "Send Money."<br>
+                        3. Enter our number: <strong>0765 123 456</strong>.<br>
+                        4. Enter the amount.<br>
+                        5. Complete the transaction.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Airtel Money -->
+            <div class="payment-card" onclick="toggleInstructions(this)">
+                <i class="fas fa-money-bill-wave"></i>
+                <h3>Airtel Money</h3>
+                <div class="instructions">
+                    <p>
+                        <strong>Airtel Money Instructions:</strong><br>
+                        1. Go to Airtel Money.<br>
+                        2. Select "Send Money."<br>
+                        3. Enter our number: <strong>0689 876 543</strong>.<br>
+                        4. Enter the amount.<br>
+                        5. Complete the transaction.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Bank Transfer -->
+            <div class="payment-card" onclick="toggleInstructions(this)">
+                <i class="fas fa-university"></i>
+                <h3>Bank Transfer</h3>
+                <div class="instructions">
+                    <p>
+                        <strong>Bank Transfer Instructions:</strong><br>
+                        Bank Name: ABC Bank<br>
+                        Account Name: Charity Organization<br>
+                        Account Number: 123456789<br>
+                        Branch: Dar es Salaam<br>
+                        SWIFT Code: ABCDTZTZ
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleInstructions(card) {
+            // Close all other open cards
+            document.querySelectorAll('.payment-card').forEach(otherCard => {
+                if (otherCard !== card && otherCard.classList.contains('active')) {
+                    otherCard.classList.remove('active');
+                }
+            });
+
+            // Toggle the clicked card
+            card.classList.toggle('active');
+        }
+    </script>
 
     <footer class="footer">
         <div class="container">
