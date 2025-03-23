@@ -305,7 +305,7 @@ body {
 
 /* Logo Image */
 .logo img {
-  height: 90%; /* Make the image fill the container */
+  height: 100%; /* Make the image fill the container */
   width: auto; /* Maintain aspect ratio */
 }
 
