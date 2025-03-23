@@ -988,7 +988,7 @@ display: block;
 
 /* Logo Image */
 .logo img {
-  height: 130%; /* Make the image fill the container */
+  height: 160%; /* Make the image fill the container */
   width: auto; /* Maintain aspect ratio */
 }
 
