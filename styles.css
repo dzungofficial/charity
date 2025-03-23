@@ -982,7 +982,7 @@ display: block;
 /* Logo Container */
 .logo {
   display: inline-block;
-  height: 80px; /* Adjust based on your logo's aspect ratio */
+  height: 60px; /* Adjust based on your logo's aspect ratio */
   transition: transform 0.3s ease;
 }
 
