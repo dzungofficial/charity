@@ -194,7 +194,7 @@
 /* Job Application Container */
 .application-container {
     background: linear-gradient(145deg, #ffffff, #f8f9fa);
-    padding: 25px;
+    padding: 50px;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     width: 100%;
