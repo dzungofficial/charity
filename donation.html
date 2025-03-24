@@ -6,14 +6,15 @@
     <title>Nexus of Hope</title>
     <link rel="stylesheet" href="donation.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-      <style>
+    <style>
         /* Global Styles */
-       
+      
         .donation-container {
-            background: var(--light);
+            background: rgba(255, 255, 255, 0.1);
             padding: 2.5rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
             max-width: 1200px;
             width: 90%;
             text-align: center;
@@ -43,22 +44,34 @@
         }
 
         .payment-card {
-            background: #fff;
+            background: rgba(255, 255, 255, 0.1);
             padding: 2rem;
-            border-radius: 8px;
+            border-radius: 20px;
             width: 280px;
             text-align: center;
             cursor: pointer;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid #e0e0e0;
+            border: 2px solid transparent;
             position: relative;
             overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+
+        .payment-card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(135deg, rgba(76, 175, 80, 0.3), rgba(44, 62, 80, 0.3));
+            border-radius: 20px;
+            z-index: -1;
         }
 
         .payment-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-            border-color: #4CAF50;
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
         }
 
         .payment-card i {
@@ -87,8 +100,8 @@
             height: 100%;
             background: rgba(255, 255, 255, 0.95);
             padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
             opacity: 0;
             transition: top 0.4s ease, opacity 0.4s ease;
             display: flex;
@@ -182,7 +195,7 @@
             .payment-card:hover {
                 transform: none;
                 box-shadow: none;
-                border-color: #e0e0e0;
+                border-color: transparent;
             }
 
             .payment-card:hover i {
@@ -191,9 +204,8 @@
 
             /* Pop-up effect for mobile */
             .payment-card.active {
-                transform: translateY(-5px);
-                box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-                border-color: #4CAF50;
+                transform: translateY(-10px);
+                box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
             }
 
             .payment-card.active i {
@@ -220,10 +232,7 @@
                 padding: 1rem;
             }
         }
-    </style>
-       
-
-        
+    </style>   
 </head>
 <body>
     <!-- Dashboard Navigation -->
