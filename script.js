@@ -204,12 +204,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Your Website Name",
-  "url": "https://yourwebsite.com",
-  "logo": "https://yourwebsite.com/logo.png"
-}
-</script>
+
